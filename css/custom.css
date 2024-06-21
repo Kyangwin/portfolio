@@ -1,0 +1,1174 @@
+/*
+	Template Name 	: Kyang Win portfolio
+	Author 			: Awaiken Theme
+	Author Url 		: 
+*/
+
+/************************************/
+/***** 	    General css		     ****/
+/************************************/
+
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background: #111;
+  color: #707070;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+::-moz-selection {
+  background: yellow;
+  color: #fff;
+}
+
+::selection {
+  background: yellow;
+  color: #fff;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #111;
+  z-index: 9999;
+  text-align: center;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 120px;
+  display: flex;
+  flex-flow: column nowrap;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.preloader .diamond {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background: yellow;
+  -webkit-transform: translateY(0) rotate(45deg) scale(0);
+  transform: translateY(0) rotate(45deg) scale(0);
+  -webkit-animation: diamonds 1500ms linear infinite;
+  animation: diamonds 1500ms linear infinite;
+}
+
+.preloader .diamond:nth-child(1) {
+  -webkit-animation-delay: -1000ms;
+  animation-delay: -1000ms;
+}
+
+.preloader .diamond:nth-child(2) {
+  -webkit-animation-delay: -2000ms;
+  animation-delay: -2000ms;
+}
+
+.preloader .diamond:nth-child(3) {
+  -webkit-animation-delay: -3000ms;
+  animation-delay: -3000ms;
+}
+
+.preloader .diamond:nth-child(4) {
+  -webkit-animation-delay: -4000ms;
+  animation-delay: -4000ms;
+}
+
+@-webkit-keyframes diamonds {
+  50% {
+    -webkit-transform: translateY(-50px) rotate(45deg) scale(1);
+    transform: translateY(-50px) rotate(45deg) scale(1);
+  }
+  100% {
+    -webkit-transform: translateY(-100px) rotate(45deg) scale(0);
+    transform: translateY(-100px) rotate(45deg) scale(0);
+  }
+}
+
+@keyframes diamonds {
+  50% {
+    -webkit-transform: translateY(-50px) rotate(45deg) scale(1);
+    transform: translateY(-50px) rotate(45deg) scale(1);
+  }
+  100% {
+    -webkit-transform: translateY(-100px) rotate(45deg) scale(0);
+    transform: translateY(-100px) rotate(45deg) scale(0);
+  }
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.btn-custom {
+  display: inline-block;
+  background: #26bdef;
+  border: 2px solid #26bdef;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 12px 30px 10px;
+  transition: all 0.3s;
+}
+
+.btn-custom:hover {
+  color: #26bdef;
+  background: none;
+}
+
+/************************************/
+/*****    Navigation area css   *****/
+/************************************/
+
+header .navbar {
+  padding: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 40;
+  transition: all 0.3s;
+}
+
+.navbar-brand h1 {
+  font-family: "Berkshire Swash", cursive;
+  font-weight: normal;
+  transition: all 0.3s;
+  color: #fff;
+  margin: 0;
+}
+
+.navbar-brand h1 span {
+  color: yellow;
+}
+
+header .navbar-collapse.collapse {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.navbar .navbar-nav .nav-item {
+  padding: 40px 6px 36px;
+  transition: all 0.3s;
+}
+
+.navbar .navbar-nav .nav-link {
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.3s;
+}
+
+.navbar .navbar-nav .nav-link.active {
+  background: none;
+  color: yellow;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: #fff;
+}
+
+.navbar .navbar-nav .nav-link.active:hover,
+.navbar .navbar-nav .nav-link.active:focus {
+  color: yellow;
+}
+
+header .navbar.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.sticky-header .navbar-nav .nav-item {
+  padding: 23px 6px;
+}
+
+.sticky-header .navbar-brand img {
+  height: 40px;
+}
+
+.navbar-toggle {
+  display: none;
+  position: absolute;
+  top: 22px;
+  right: 15px;
+}
+
+.navbar-toggle .slicknav_btn {
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+
+.navbar-toggle .slicknav_icon-bar {
+  background: #fff;
+  box-shadow: none;
+  height: 1px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.slicknav_menu {
+  padding: 0;
+  background: none;
+}
+
+.slicknav_btn {
+  margin: 0;
+}
+
+.slicknav_nav a {
+  color: #fff;
+  padding: 8px 0;
+  text-transform: uppercase;
+}
+
+.slicknav_nav a:hover {
+  background: none;
+  color: yellow;
+}
+
+/* Base styles for the navigation links */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: yellow; /* Change this to your preferred text color */
+  text-decoration: none;
+  padding: 0.5em 1em;
+  transition: color 0.3s ease;
+}
+
+/* Before the hover effect */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: yellow; /* Change this to your preferred underline color */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease;
+}
+
+/* On hover, scale the underline */
+.nav-link:hover::after,
+.nav-link:focus::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Active link underline */
+.nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/************************************/
+/*****     Banner Section css    ****/
+/************************************/
+
+.banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  padding: 220px 0 120px;
+}
+
+.banner-content h2 {
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 2.3em;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.04em;
+}
+
+.banner-content h2 span.before-heading {
+  display: block;
+  font-size: 22px;
+}
+
+.banner-content h2 span {
+  display: block;
+  font-size: 56px;
+  font-weight: 300;
+}
+
+.banner-content p {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 1.5em;
+}
+.banner-content {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .banner {
+    padding: 60px 0;
+  }
+
+  .banner-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .banner-content p {
+    font-size: 0.8rem;
+  }
+}
+
+.banner-content {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.banner-image img {
+  max-width: 100%;
+  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner-content {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .banner-image {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner-content {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .banner-image {
+    text-align: center;
+  }
+}
+
+/**************************************/
+/*****     About us Section css    ****/
+/**************************************/
+
+.about-us {
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 80px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.section-title:after {
+  content: "";
+  display: block;
+  width: 60px;
+  margin-left: -30px;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border-bottom: 10px dotted yellow;
+}
+
+.section-title h2 {
+  color: yellow;
+  font-family: "Berkshire Swash", cursive;
+  font-weight: normal;
+  font-size: 36px;
+}
+
+.section-title p {
+  color: #707070;
+}
+
+.about-image {
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.about-image:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: -10px;
+  bottom: -10px;
+  border: 1px solid #222;
+  z-index: -1;
+}
+
+.about-image img {
+  width: 100%;
+}
+
+.about-content h3 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 26px;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.about-content h3:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: yellow;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.about-content p {
+  line-height: 1.6em;
+  margin-bottom: 1.6em;
+}
+
+.about-content ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.about-content ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about-content ul li {
+  float: left;
+  width: 48%;
+  padding: 4px 0 4px 36px;
+  margin-right: 2%;
+  position: relative;
+}
+
+.about-content ul li b,
+.about-content ul li strong {
+  font-weight: 600;
+}
+
+.about-content ul li i {
+  color: yellow;
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*--------------------------------------------------------------
+  # Skills
+  --------------------------------------------------------------*/
+
+.skills .progress {
+  height: 50px;
+  display: block;
+  background: none;
+}
+
+.skills .progress .skill {
+  padding: 10px 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: yellow;
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: #fbeaf1;
+}
+
+.soft-skill {
+  border: 1px solid yellow;
+  padding: 20px;
+  text-align: center;
+  height: auto;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: yellow;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .soft-skill {
+    height: 100px;
+  }
+}
+
+/*****     My Education Section css    ****/
+/***************************************/
+.Education .Education-title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.Education .Education-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid yellow;
+  position: relative;
+}
+
+.Education .Education-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  color: yellow;
+  margin-bottom: 10px;
+}
+
+.Education .Education-item h5 {
+  font-size: 16px;
+  background: #e4ebf3;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.Education .Education-item ul {
+  padding-left: 20px;
+}
+
+.Education .Education-item ul li {
+  padding-bottom: 10px;
+}
+
+.Education .Education-item:last-child {
+  padding-bottom: 0;
+}
+
+.Education .Education-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid yellow;
+}
+
+/**************************************/
+/*****     Expertise Section css    ****/
+/**************************************/
+
+.expertise {
+  padding: 100px 0 70px;
+  background: #151515;
+  position: relative;
+}
+
+.expertise-single {
+  background: #222;
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid #333;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.expertise-single:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-top: 1px solid yellow;
+  border-bottom: 1px solid yellow;
+  transform: scale(0, 1);
+  transition: all 0.6s;
+}
+
+.expertise-single:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-left: 1px solid yellow;
+  border-right: 1px solid yellow;
+  transform: scale(1, 0);
+  transition: all 0.6s;
+}
+
+.expertise-single:hover:before,
+.expertise-single:hover:after {
+  transform: scale(1);
+}
+
+.expertise-single .icon-box {
+  color: green;
+  font-size: 60px;
+  line-height: 1em;
+  margin-bottom: 26px;
+}
+
+.expertise-single h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.expertise-single p {
+  margin-bottom: 0;
+}
+
+/***************************************/
+/*****     Portfolio Section css    ****/
+/***************************************/
+
+.portfolio {
+  padding: 100px 0 70px;
+  background: #151515;
+  position: relative;
+}
+
+.portfolio-single {
+  width: 100%;
+  height: 430px;
+  background: #222;
+  max-height: 500px;
+  max-width: 500px;
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid #333;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.portfolio-single:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-top: 1px solid #eded05;
+  border-bottom: 1px solid #eded05;
+  transform: scale(0, 1);
+  transition: all 0.6s;
+}
+
+.portfolio-single:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-left: 1px solid #eded05;
+  border-right: 1px solid #eded05;
+  transform: scale(1, 0);
+  transition: all 0.6s;
+}
+
+.portfolio-single:hover:before,
+.portfolio-single:hover:after {
+  transform: scale(1);
+}
+
+.portfolio-single h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.portfolio-single p {
+  margin-bottom: 0;
+}
+
+.portfolio {
+  padding: 100px 0;
+  background: #151515;
+}
+
+.portfolio-single {
+  text-align: center;
+  background: #222;
+  border: 1px solid #333;
+  position: relative;
+  overflow: hidden; /* Added overflow to prevent interference with hover effect */
+}
+
+.portfolio-single .image-border {
+  position: relative;
+  z-index: 1; /* Ensure image is above the hover effect */
+}
+
+.portfolio-single:before,
+.portfolio-single:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #eded05; /* Simplified border definition */
+  transform: scaleX(0); /* Changed scale to scale only in X direction */
+  transition: transform 0.6s;
+  z-index: 0; /* Set z-index to be below other content */
+}
+
+.portfolio-single:hover:before,
+.portfolio-single:hover:after {
+  transform: scaleX(1); /* Scale only in X direction on hover */
+}
+
+.portfolio-single .btn {
+  position: relative; /* Ensure button is above the hover effect */
+  z-index: 2; /* Set z-index above other content */
+}
+
+.portfolio-single {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.portfolio-single .image-border img {
+  width: 100%;
+  height: 150px;
+  max-width: 300px;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+}
+
+.portfolio-single .d-flex {
+  position: absolute; /* Position the buttons absolutely */
+  bottom: 5px; /* 5px from the bottom */
+  left: 0; /* Align with the left edge of the parent */
+  right: 0; /* Align with the right edge of the parent */
+  margin: auto; /* Center horizontally */
+}
+
+.portfolio-single .d-flex .btn {
+  flex-grow: 1; /* Allow buttons to grow equally */
+}
+
+/************************************/
+/*****       Contact us css      ****/
+/************************************/
+
+.contactus {
+  padding: 100px 0;
+}
+
+.contact-form .form-control {
+  background: #222;
+  border: none;
+  border-radius: 0;
+  height: auto;
+  padding: 14px 20px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  resize: none;
+  outline: 0;
+  box-shadow: none;
+  color: #fff;
+}
+
+.btn-contact {
+  background: none;
+  display: inline-block;
+  border: 1px solid yellow;
+  color: yellow;
+  padding: 12px 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.4s;
+}
+
+.btn-contact:hover {
+  background: yellow;
+  color: #fff;
+}
+
+.custometext {
+  color: yellow;
+}
+
+.btn-outline-warning.customtext:hover,
+.btn-outline-warning.customtext:focus,
+.btn-outline-warning.customtext:active {
+  color: #000; /* Text color */
+  background-color: yellow; /* Yellow background color */
+  border-color: yellow; /* Yellow border color */
+}
+
+.custombtn {
+  border: 1px solid yellow;
+  color: yellow;
+}
+
+/*****************************************/
+/*****     Contact Information css    ****/
+/*****************************************/
+
+.contact-information {
+  background: linear-gradient(#111111 50%, #151515 50%);
+}
+
+.contact-info-single {
+  background: #222;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #333;
+  position: relative;
+}
+
+.contact-info-single:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-top: 1px solid yellow;
+  border-bottom: 1px solid yellow;
+  transform: scale(0, 1);
+  transition: all 0.6s;
+}
+
+.contact-info-single:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-left: 1px solid yellow;
+  border-right: 1px solid yellow;
+  transform: scale(1, 0);
+  transition: all 0.6s;
+}
+
+.contact-info-single:hover:before,
+.contact-info-single:hover:after {
+  transform: scale(1);
+}
+
+.contact-info-single h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-info-single h3:after {
+  content: "";
+  display: block;
+  width: 40px;
+  margin-left: -20px;
+  height: 3px;
+  background: yellow;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.contact-info-single p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/****************************************/
+/*****       Footer Section css      ****/
+/****************************************/
+
+.main-footer {
+  padding: 50px 0;
+  background: #151515;
+}
+.footer-logo {
+  text-align: center;
+}
+.footer-logo h1 {
+  font-family: "Berkshire Swash", cursive;
+  font-weight: normal;
+  transition: all 0.3s;
+  color: #fff;
+}
+.footer-logo h1 span {
+  color: yellow;
+}
+.footer-about {
+  max-width: 568px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+.footer-about p {
+  line-height: 1.6em;
+  margin-bottom: 1em;
+}
+.footer-social {
+  text-align: center;
+  margin-top: 30px;
+}
+.footer-social a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background: #222;
+  line-height: 50px;
+  color: #707070;
+  border-radius: 50%;
+  border: 1px solid #333;
+  margin: 0 5px;
+  transition: all 0.5s;
+}
+.footer-social a:hover {
+  background: none;
+  border-color: yellow;
+  color: yellow;
+}
+.footer-copyright {
+  max-width: 568px;
+  margin: 30px auto 0;
+  text-align: center;
+  padding-top: 30px;
+  position: relative;
+}
+.footer-copyright:before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #333;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -40px;
+}
+.footer-copyright p {
+  line-height: 1.6em;
+  margin: 0;
+}
+.footer-copyright p a {
+  color: #707070;
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+.footer-copyright p a:hover {
+  color: yellow;
+}
+
+/*********************************/
+/*****     Media Query Css    ****/
+/*********************************/
+
+@media only screen and (max-width: 991px) {
+  .header .navbar-nav {
+    display: none;
+  }
+
+  .header .navbar {
+    align-items: flex-start;
+  }
+
+  .navbar-brand {
+    padding: 13px 0;
+  }
+
+  .header .navbar .container {
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .header .navbar-toggle,
+  #responsive-menu {
+    display: block;
+    width: 100%;
+  }
+
+  .about-us,
+  .portfolio,
+  .contactus,
+  .main-footer {
+    padding: 60px 0;
+  }
+
+  .banner {
+    background-position: top right;
+  }
+
+  .section-title {
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .section-title:after {
+    width: 48px;
+    margin-left: -24px;
+    border-width: 8px;
+  }
+
+  .section-title p {
+    font-size: 14px;
+  }
+
+  .about-image {
+    margin-bottom: 50px;
+  }
+
+  .contact-info-single {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-content ul li {
+    width: 100%;
+    float: none;
+  }
+
+  .banner {
+    padding: 160px 0 60px;
+  }
+
+  .banner-content h2 {
+    font-size: 16px;
+  }
+
+  .banner-content h2 span {
+    font-size: 28px;
+  }
+
+  .banner-content p {
+    font-size: 16px;
+  }
+
+  .about-content h3 {
+    font-size: 22px;
+  }
+  .footer-social a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .portfolio-single {
+    height: 480px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .header .container {
+    width: 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .portfolio-nav ul li a {
+    padding: 4px 6px;
+    margin: 0 2px;
+    font-size: 14px;
+  }
+}
